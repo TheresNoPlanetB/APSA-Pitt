@@ -2,16 +2,16 @@
 
 #Here is Milestone 1
 
+##calculate the positive sequence series impedance and shunt admittance matrices
+###
 
-
+#####
 #given transformer system ratings and winding connection configurations
 #given transmission line conductor data, line lengths, and tower drawings.
 #This will be used to calculate the positive sequence series impedance and shunt admittance matrices.
 #will use the data above and the one-line diagram to develop the positive sequence power flow system Ybus matrix.
 #The computer program will be submitted along with a write up of the solution.
 #Students are to type equations and results out rather than just copy and paste computer program outputs. Units should be included
-
-##calculate the positive sequence series impedance and shunt admittance matrices
 
 
 #Text 3.1 - 3.5
@@ -46,7 +46,7 @@
 #L5: 10 miles
 #L6: 35 miles
 
-#ACSR
+#ACSR is the line specifications
 #0.647 dia inches
 #0.0217 Feet
 #460 amps

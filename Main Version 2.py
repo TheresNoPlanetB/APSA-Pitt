@@ -16,11 +16,12 @@ MainGrid.add_generator("G2", "Bus7", 100, 0.12, 0.14, 0.05, "Resistor", 1)
 
 # Add Transformers, Paramters: name, Starting Bus, Ending Bus, Apparentpower (MVAR), v1rated, v2rated, impedance,
 # xrratio, Connection 1 type, Grounding type, Value of grounding, Connection 2 type, Grounding type, Value of grounding
-MainGrid.add_transformer("T1", "Bus1", "Bus2", 125, 20, 230, 0.085, 10, "Delta", "N/A", 0, "Grounded Wye", "Resistor", 1)
-MainGrid.add_transformer("T2", "Bus7", "Bus6", 200, 18, 230, 0.105, 12, "Delta", "N/A", 0, "UnGrounded Wye", "Ungrounded", 0)
+MainGrid.add_transformer("T1", "Bus1", "Bus2", 125, 0.085, 10, "Delta", "N/A", 0, "Grounded Wye", "Resistor", 1)
+MainGrid.add_transformer("T2", "Bus7", "Bus6", 200, 0.105, 12, "Delta", "N/A", 0, "UnGrounded Wye", "Ungrounded", 0)
+#These areguements are: Name, Connections,
 
 # Add Transmission Line Connections
-# Parameters: name, bus to bus location, length  (miles), coordinates for each phase, codeword for the conductor type,
+# Parameters: name, bus to bus location, length  (miles), coordinates for each phase, codeword foπr the conductor type,
 # number of bundles per phase, and separation of bundles per phase
 MainGrid.add_transmissionline("L1", "Bus2", "Bus4", 10, 0, 0, 19.5, 0, 39, 0, "Partridge", 2, 1.5)
 MainGrid.add_transmissionline("L2", "Bus2", "Bus3", 25, 0, 0, 19.5, 0, 39, 0, "Partridge", 2, 1.5)
@@ -33,6 +34,7 @@ MainGrid.add_transmissionline("L6", "Bus4", "Bus5", 35, 0, 0, 19.5, 0, 39, 0, "P
 MainGrid.calculate_Ybus()
 
 # Set bus types, Parameters: name, Bus type, real power, Q or V depending on Bus type
+#add voltages
 MainGrid.setBusData("Bus1", "Slack Bus", 0, 0)
 MainGrid.setBusData("Bus2", "Load Bus", 0, 0)
 MainGrid.setBusData("Bus3", "Load Bus", 110, 50)
